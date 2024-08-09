@@ -22,7 +22,17 @@ class Junior(Utilisateur):
         for projet in projets:
             if not projet.startswith("pr_"):
                 print(projet)
+"""
+La méthode afficher_projets dans la classe Junior va écraser celle qui a été créée 
+dans la classe parente Utilisateur, car elle a été modifiée dans la classe Junior. 
+En effet, la méthode dans la classe Junior a priorité sur celle dans la classe parente.
 
+
+La surcharge est un concept courant dans la programmation orientée objet, 
+où plusieurs méthodes dans la même classe (ou dans des classes parentes et enfants) 
+portent le même nom mais diffèrent par leurs paramètres ou leur comportement. 
+ 
+"""
 
 paul = Junior("Paul", "Durand")
 paul.afficher_projets()
